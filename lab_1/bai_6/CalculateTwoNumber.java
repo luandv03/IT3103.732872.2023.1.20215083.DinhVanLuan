@@ -27,6 +27,5 @@ public class CalculateTwoNumber {
 
         JOptionPane.showMessageDialog(null, "Sum = " + sum + "\n" + "Difference = " + difference + "\n" + "Product = " + product + "\n");
 
-       
     }
 }
