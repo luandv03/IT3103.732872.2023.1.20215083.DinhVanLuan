@@ -1,10 +1,12 @@
+// Author: Dinh Van Luan
+// MSSV: 20215083
 package lab_1.bai_6;
 
 import javax.swing.JOptionPane;
 
 public class CalculateTwoNumber {
     public static void main(String[] args) {
-         String strNum1, strNum2;
+        String strNum1, strNum2;
 
         strNum1 = JOptionPane.showInputDialog(null, "Please input the first number: ", "Input the first number", JOptionPane.INFORMATION_MESSAGE);
         strNum2 = JOptionPane.showInputDialog(null, "Please input the second number: ", "Input the second number", JOptionPane.INFORMATION_MESSAGE);
@@ -19,17 +21,12 @@ public class CalculateTwoNumber {
     
         if (num2 != 0) {
             quote = num1 / num2;
+            JOptionPane.showMessageDialog(null, "Sum = " + sum + "\n" + "Difference = " + difference + "\n" + "Product = " + product + "\n" + "Quote = " + quote);
+            return;
         }
 
-        System.out.println("Tong la: " + sum);
-        System.out.println("Hieu la: " + difference);
-        System.out.println("Tich la: " + product);
-        if (num2 != 0) {
-            quote = num1 / num2;
-            System.out.println("Thuong la: " + quote);
-            return ;
-        }
+        JOptionPane.showMessageDialog(null, "Sum = " + sum + "\n" + "Difference = " + difference + "\n" + "Product = " + product + "\n");
 
-        System.out.println("Khong co thuong vi num2 == 0");
+       
     }
 }
