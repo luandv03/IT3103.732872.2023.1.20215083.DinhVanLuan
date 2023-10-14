@@ -1,3 +1,5 @@
+// Author: Dinh Van Luan
+// MSSV: 20215083
 package lab_1.bai_7;
 
 import java.util.Scanner;
@@ -38,6 +40,7 @@ public class EquationSolver {
             } else if (select == 2) {
                 // a1x + b1y = c1
                 // a2x + b2y = c2
+                System.out.println("Nhap vao a1, b1, c1 \n a2, b2, c2 \n");
                 double a1 = in.nextDouble();
                 double b1 = in.nextDouble();
                 double c1 = in.nextDouble();
@@ -59,6 +62,7 @@ public class EquationSolver {
                 }
             } else if (select == 3) {
                 // ax^2 + bx + c = 0;
+                System.out.println("Nhap vao a, b, c");
                 double a = in.nextDouble();
                 double b = in.nextDouble();
                 double c = in.nextDouble();
@@ -74,10 +78,10 @@ public class EquationSolver {
                         System.out.println("Phuong trinh co nghiem la: x = " + -c/b);
                     }
                 } else {
-                    double delta = b*b - 2*a*c;
+                    double delta = b*b - 4*a*c;
 
                     if (delta > 0) {
-                        System.out.println("Phuong trinh co 2 nghiem: x1 = " + (-b + Math.sqrt(delta)) / 2*a + "; x2 = " + (-b + Math.sqrt(delta)) / 2*a);
+                        System.out.println("Phuong trinh co 2 nghiem: x1 = " + (-b + Math.sqrt(delta)) / 2*a + "; x2 = " + (-b - Math.sqrt(delta)) / 2*a);
                     } else if (delta < 0) {
                         System.out.println("Phuong trinh vo nghiem");
                     } else {
