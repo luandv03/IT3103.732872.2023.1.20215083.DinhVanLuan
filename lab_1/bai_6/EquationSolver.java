@@ -1,6 +1,6 @@
 // Author: Dinh Van Luan
 // MSSV: 20215083
-package lab_1.bai_7;
+package lab_1.bai_6;
 
 import java.util.Scanner;
 import java.lang.Math; 

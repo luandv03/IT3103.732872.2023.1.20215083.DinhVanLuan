@@ -1,6 +1,6 @@
 // Author: Dinh Van Luan
 // MSSV: 20215083
-package lab_1.bai_6;
+package lab_1.bai_5;
 
 import javax.swing.JOptionPane;
 
