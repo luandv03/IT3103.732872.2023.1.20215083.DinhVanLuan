@@ -1,3 +1,5 @@
+// Author: Dinh Van Luan
+// MSSV: 20215083
 package lab_1.excerises.bai_6_1;
 
 import javax.swing.JOptionPane;
