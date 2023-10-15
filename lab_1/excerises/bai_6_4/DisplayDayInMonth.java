@@ -9,6 +9,7 @@ public class DisplayDayInMonth {
         try (Scanner in = new Scanner(System.in)) {
             int month, year;
             do {
+                System.out.print("Hi, Dinh Van Luan - 20215083 \n");
                 System.out.print("Nhap vao thang: ");
                 month = in.nextInt();
                 System.out.print("Nhap vao nam: ");

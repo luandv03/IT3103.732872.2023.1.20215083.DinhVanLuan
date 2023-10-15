@@ -1,7 +1,5 @@
 // Author: Dinh Van Luan
 // MSSV: 20215083
-package lab_1.bai_3;
-
 import javax.swing.JOptionPane;
 
 public class FirstDialog {

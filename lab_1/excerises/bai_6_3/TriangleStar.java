@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class TriangleStar {
     public static void main(String[] args) {
         try(Scanner in = new Scanner(System.in)) {
+            System.out.println("Hi, Dinh Van Luan - 20215083");
             System.out.println("Enter height of triangle:");
             int nHeight = in.nextInt();
             int nStarMax = 2*nHeight - 1;
