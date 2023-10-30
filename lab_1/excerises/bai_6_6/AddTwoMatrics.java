@@ -40,6 +40,7 @@ public class AddTwoMatrics {
             }
 
             //display add two matrics on console;
+            System.out.println("Add Matrix: ");
             for (int i = 0; i < nRow; i++) {
                 for (int j = 0; j < nColumn; j++) {
                     System.out.print(matrixAdd[i][j] + " ");
