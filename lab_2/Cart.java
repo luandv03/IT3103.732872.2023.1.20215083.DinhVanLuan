@@ -19,6 +19,7 @@ public class Cart {
         } else System.out.println("The cart is almost full");
     }
 
+    // remove any dvd from itemsOrdered.
     public DigitialVideoDisc removeDigitialVideoDisc(DigitialVideoDisc disc) {
         for (int i = 0; i < qtyOrdered; i++) {
             if (itemsOrdered[i].equals(disc)) {

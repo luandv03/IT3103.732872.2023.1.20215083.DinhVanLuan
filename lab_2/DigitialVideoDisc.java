@@ -54,6 +54,7 @@ public class DigitialVideoDisc {
         return this.cost;
     }
 
+    // overide equals method to compare dvd objects.
     @Override
     public boolean equals(Object disc) {
         if (disc == this) return true;
