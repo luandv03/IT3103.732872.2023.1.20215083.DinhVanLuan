@@ -54,6 +54,10 @@ public class DigitialVideoDisc {
         return this.cost;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     // overide equals method to compare dvd objects.
     @Override
     public boolean equals(Object disc) {
