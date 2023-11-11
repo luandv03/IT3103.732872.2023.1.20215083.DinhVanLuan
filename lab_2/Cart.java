@@ -20,7 +20,7 @@ public class Cart {
     }
 
     public void addDigitialVideoDisc(DigitialVideoDisc[] discList) {
-           if (qtyOrdered <= Cart.MAX_NUMBERS_OF - 1) {
+           if (qtyOrdered <= Cart.MAX_NUMBERS_OF - discList.length) {
                 for (int i = 0; i < discList.length; i++) {
                     itemsOrdered[qtyOrdered] = discList[i];
                     qtyOrdered++;
