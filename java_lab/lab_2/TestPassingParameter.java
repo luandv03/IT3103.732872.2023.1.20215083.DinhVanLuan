@@ -1,8 +1,8 @@
 public class TestPassingParameter {
     
     public static void main(String[] args) {
-        DigitialVideoDisc jungleDVD = new DigitialVideoDisc("Jungle");
-        DigitialVideoDisc cinderellaDVD = new DigitialVideoDisc("Cinderella");
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 
         swap(jungleDVD, cinderellaDVD);
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
@@ -19,10 +19,10 @@ public class TestPassingParameter {
         o2 = tmp;
     }
 
-    public static void changleTitle(DigitialVideoDisc dvd, String title) {
+    public static void changleTitle(DigitalVideoDisc dvd, String title) {
         String oldTitle = dvd.getTitle();
         dvd.setTitle(title);
-        dvd = new DigitialVideoDisc(oldTitle);
+        dvd = new DigitalVideoDisc(oldTitle);
         
     }
 }

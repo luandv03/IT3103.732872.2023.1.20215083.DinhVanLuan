@@ -4,14 +4,14 @@
 
 public class Store {
     public static final int MAX_NUMBERS_OF = 10000;
-    private DigitialVideoDisc itemsInStore[] = new DigitialVideoDisc[MAX_NUMBERS_OF];
+    private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_OF];
     private int qtyOrdered;
 
     public Store() {
         this.qtyOrdered = 0;
     }
 
-    public void addDigitialVideoDisc(DigitialVideoDisc disc) {
+    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
         if (qtyOrdered <= Cart.MAX_NUMBERS_OF) {
             itemsInStore[qtyOrdered] = disc;
             qtyOrdered++;
@@ -20,10 +20,10 @@ public class Store {
     }
 
     // remove any dvd from itemsOrdered.
-    public DigitialVideoDisc removeDigitialVideoDisc(DigitialVideoDisc disc) {
+    public DigitalVideoDisc removeDigitalVideoDisc(DigitalVideoDisc disc) {
     for (int i = 0; i < qtyOrdered; i++) {
         if (itemsInStore[i].equals(disc)) {
-            DigitialVideoDisc tmp = itemsInStore[i];
+            DigitalVideoDisc tmp = itemsInStore[i];
             for (int j = i; j < qtyOrdered; j++) {
                 itemsInStore[j] = itemsInStore[j+1];
             }
