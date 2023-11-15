@@ -83,4 +83,13 @@ public class DigitialVideoDisc {
         this.category == tmp.getCategory() && this.director == tmp.getDirector() && 
         this.length == tmp.getLength() && this.cost == tmp.getCost();
     }
+
+    // Đinh Văn Luận - 20215083
+    public String toString() {
+        return this.id + ".DVD - " + this.title + " - " + this.category + " - " + this.director  + " - " + this.length + " : " + this.cost + "$";
+    }
+
+    public boolean isMatch(String title) {
+        return this.title.equals(title);
+    }
 }
