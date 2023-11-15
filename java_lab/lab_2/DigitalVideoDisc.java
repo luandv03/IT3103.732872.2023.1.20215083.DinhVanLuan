@@ -2,7 +2,7 @@
 * @author Đinh Văn Luận - 20215083
 */
 
-public class DigitialVideoDisc {
+public class DigitalVideoDisc {
     private String title;
     private String category;
     private String director;
@@ -11,30 +11,30 @@ public class DigitialVideoDisc {
     private int id;
     private static int nbDigitalVideoDiscs = 0;
 
-    public DigitialVideoDisc(String title) {
+    public DigitalVideoDisc(String title) {
         this.title = title;
     }
 
-    public DigitialVideoDisc (String title, String category,float cost) {
-        DigitialVideoDisc.nbDigitalVideoDiscs++;
-        this.id = DigitialVideoDisc.nbDigitalVideoDiscs;
+    public DigitalVideoDisc (String title, String category,float cost) {
+        DigitalVideoDisc.nbDigitalVideoDiscs++;
+        this.id = DigitalVideoDisc.nbDigitalVideoDiscs;
         this.category = category;
         this.title = title;
         this.cost = cost;
     }
 
-    public DigitialVideoDisc(String director, String category, String title, float cost){
-        DigitialVideoDisc.nbDigitalVideoDiscs++;
-        this.id = DigitialVideoDisc.nbDigitalVideoDiscs;
+    public DigitalVideoDisc(String director, String category, String title, float cost){
+        DigitalVideoDisc.nbDigitalVideoDiscs++;
+        this.id = DigitalVideoDisc.nbDigitalVideoDiscs;
         this.director = director;
         this.category = category;
         this.title = title;
         this.cost = cost;
     }
 
-    public DigitialVideoDisc(String title, String category, String director, int length, float cost) {
-        DigitialVideoDisc.nbDigitalVideoDiscs++;
-        this.id = DigitialVideoDisc.nbDigitalVideoDiscs;
+    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        DigitalVideoDisc.nbDigitalVideoDiscs++;
+        this.id = DigitalVideoDisc.nbDigitalVideoDiscs;
         this.title = title;
         this.director = director;
         this.category = category;
@@ -75,9 +75,9 @@ public class DigitialVideoDisc {
     public boolean equals(Object disc) {
         if (disc == this) return true;
 
-        if (!(disc instanceof DigitialVideoDisc)) return false;
+        if (!(disc instanceof DigitalVideoDisc)) return false;
         
-        DigitialVideoDisc tmp = (DigitialVideoDisc)disc;
+        DigitalVideoDisc tmp = (DigitalVideoDisc)disc;
 
         return this.title == tmp.getTitle() && 
         this.category == tmp.getCategory() && this.director == tmp.getDirector() && 
