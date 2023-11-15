@@ -79,6 +79,7 @@ public class Cart {
         System.out.println("Total cost: " + totalCost);
     }
 
+    // Đinh Văn Luận - 20215083
     public void searchDVDsById(int id) {
         boolean check = false; // biến check này để kiểm tra sau khi duyệt hết danh sách thì có tìm được DVD cần tìm không
 
