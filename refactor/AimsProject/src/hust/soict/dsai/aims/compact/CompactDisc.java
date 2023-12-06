@@ -23,7 +23,7 @@ public class CompactDisc extends Media implements Playable{
     }
 
     public void addTrack(Track track) {
-        if (tracks.indexOf(track) >= 0) {
+        if (tracks.contains(track)) {
             System.out.println("StatusCode: 400, Message: This track already exists");
 
             return;
@@ -34,7 +34,7 @@ public class CompactDisc extends Media implements Playable{
     }
 
     public void removeTrack(Track track) {
-        if (tracks.indexOf(track) < 0) {
+        if (!tracks.contains(track)) {
             System.out.println("StatusCode: 404, Message: Track not found!");
 
             return;

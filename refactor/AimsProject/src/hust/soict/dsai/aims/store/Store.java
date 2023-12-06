@@ -13,7 +13,7 @@ public class Store {
     private List<Media> itemsInStore = new ArrayList<Media>();
 
     public void addMedia(Media media) {
-        if (itemsInStore.indexOf(media) >= 0) {
+        if (itemsInStore.contains(media)) {
             System.out.println("StatusCode: 400, Message: This media already exists");
 
             return;
@@ -24,7 +24,7 @@ public class Store {
     }
 
     public void removeMedia(Media media) {
-        if (itemsInStore.indexOf(media) < 0) {
+        if (!itemsInStore.contains(media)) {
             System.out.println("StatusCode: 404, Message: media not found!");
 
             return;
