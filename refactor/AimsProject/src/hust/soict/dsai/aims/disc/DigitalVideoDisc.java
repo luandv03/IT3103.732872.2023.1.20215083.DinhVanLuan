@@ -54,9 +54,10 @@ public class DigitalVideoDisc extends Disc implements Playable {
     //     this.length == tmp.getLength() && this.cost == tmp.getCost();
     // }
 
-    // public String toString() {
-    //     return this.id + ".DVD - " + this.title + " - " + this.category + " - " + this.director  + " - " + this.length + " : " + this.cost + "$";
-    // }
+    @Override
+    public String toString() {
+        return this.id + ".DVD - " + this.title + " - " + this.category + " - " + this.director  + " - " + this.length + " : " + this.cost + "$";
+    }
 
     // Đinh Văn Luận - 20215083
     public boolean isMatch(String title) {

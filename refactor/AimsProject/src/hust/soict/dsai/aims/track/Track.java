@@ -25,4 +25,17 @@ public class Track implements Playable{
         System.out.println("Playing DVD: " + this.getTitle());
 	    System.out.println("DVD length: " + this.getLength());
     }
+
+    // Đinh Văn Luận - 20215083
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+
+        if (!(o instanceof Track)) return false;
+        
+        Track tmp = (Track) o;
+
+        return this.getTitle().equals(tmp.getTitle()) && this.getLength() == tmp.getLength();
+
+    }
 }

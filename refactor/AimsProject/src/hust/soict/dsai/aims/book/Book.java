@@ -22,8 +22,7 @@ public class Book extends Media {
 
     public boolean addAuthor(String authorName) {
         // check author already?
-        // found => index of that authorName in list else return -1
-        if (authors.indexOf(authorName) >= 0) return false;
+        if (authors.contains(authorName)) return false;
 
         authors.add(authorName);
 
@@ -32,11 +31,19 @@ public class Book extends Media {
 
     public boolean removeAuthor(String authorName) {
         // check author already?
-        if (authors.indexOf(authorName) < 0) return false;
+        if (!authors.contains(authorName)) return false;
         
         authors.remove(authorName);
 
         return true;
+    }
+
+    public String toString() {
+        String authorsString = "";
+        for (String author : authors) {
+            authorsString += author.toString() + "; ";
+        }
+        return this.id + ".DVD - " + this.title + " - " + this.category + " - " + authorsString  + " : " + this.cost + "$";
     }
 
 }

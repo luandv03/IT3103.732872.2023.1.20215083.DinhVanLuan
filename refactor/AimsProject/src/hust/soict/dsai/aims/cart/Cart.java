@@ -13,7 +13,7 @@ public class Cart {
     private List<Media> itemsOrdered = new ArrayList<Media>();
 
     public void addMedia(Media media) {
-        if (itemsOrdered.indexOf(media) >= 0) {
+        if (itemsOrdered.contains(media)) {
             System.out.println("StatusCode: 400, Message: This media already exists");
 
             return;
@@ -24,7 +24,7 @@ public class Cart {
     }
 
     public void removeMedia(Media media) {
-        if (itemsOrdered.indexOf(media) < 0) {
+        if (!itemsOrdered.contains(media)) {
             System.out.println("StatusCode: 404, Message: media not found!");
 
             return;
