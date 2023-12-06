@@ -1,42 +1,36 @@
 package hust.soict.dsai.aims.store;
 
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import java.util.ArrayList;
+import java.util.List;
+
+import hust.soict.dsai.aims.media.Media;
 
 /**
 * @author Đinh Văn Luận - 20215083
 */
 
 public class Store {
-    public static final int MAX_NUMBERS_OF = 10000;
-    private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_OF];
-    private int qtyOrdered;
+    private List<Media> itemsInStore = new ArrayList<Media>();
 
-    public Store() {
-        this.qtyOrdered = 0;
-    }
+    public void addMedia(Media media) {
+        if (itemsInStore.indexOf(media) >= 0) {
+            System.out.println("StatusCode: 400, Message: This media already exists");
 
-    public void addDigitalVideoDisc(DigitalVideoDisc disc) {
-        if (qtyOrdered <= Cart.MAX_NUMBERS_OF) {
-            itemsInStore[qtyOrdered] = disc;
-            qtyOrdered++;
-            System.out.println("The disc has been added");
-        } else System.out.println("The cart is almost full");
-    }
-
-    // remove any dvd from itemsOrdered.
-    public DigitalVideoDisc removeDigitalVideoDisc(DigitalVideoDisc disc) {
-    for (int i = 0; i < qtyOrdered; i++) {
-        if (itemsInStore[i].equals(disc)) {
-            DigitalVideoDisc tmp = itemsInStore[i];
-            for (int j = i; j < qtyOrdered; j++) {
-                itemsInStore[j] = itemsInStore[j+1];
-            }
-            qtyOrdered--;
-            return tmp;
+            return;
         }
+
+        itemsInStore.add(media);
+        System.out.println("StatusCode: 200, Message: Add media successfull!");
     }
 
-        return null;
+    public void removeMedia(Media media) {
+        if (itemsInStore.indexOf(media) < 0) {
+            System.out.println("StatusCode: 404, Message: media not found!");
+
+            return;
+        }
+
+        itemsInStore.remove(media);
+        System.out.println("StatusCode: 200, Message: Remove media successfull!");
     }
 } 
